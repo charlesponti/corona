@@ -59,7 +59,7 @@ export default function Cards ({ countryCode }) {
         component={Card}
         className={cx(styles.card, styles.confirmed)}
       >
-        <CardContent item>
+        <CardContent>
           <Title title="Confirmed Cases" />
           <Value value={data.confirmed} />
           <LastUpdate date={data.lastUpdate}></LastUpdate>
@@ -72,7 +72,7 @@ export default function Cards ({ countryCode }) {
         component={Card}
         className={cx(styles.card, styles.recovered)}
       >
-        <CardContent item>
+        <CardContent>
           <Title title="Recovered"></Title>
           <Value value={data.recovered} />
           <LastUpdate date={data.lastUpdate}></LastUpdate>

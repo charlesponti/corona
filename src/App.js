@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@material-ui/core'
+import { Typography, Link } from '@material-ui/core'
 import { Cards, Chart, CountryPicker } from './components'
 import styles from './App.module.css'
 import img from './covid.png'
@@ -30,6 +30,11 @@ class App extends React.Component {
         <CountryPicker onChange={this.onCountryChange.bind(this)} />
         <Cards countryCode={countryCode} />
         <Chart countryCode={countryCode} />
+        <Typography className={styles.footer}>
+          Made with ❤️
+           by <Link rel="noopener noreferrer" target="_blank" href="https://ponti.io" onClick={() => console.log('clicked website')}>
+             @thecharlesponti</Link>
+        </Typography>
       </div>
     )
   }

@@ -7,6 +7,8 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import { fetchDailyData, fetchCountryConfirmedData } from '../../api'
 
+import styles from './Chart.module.css'
+
 const Chart = ({ countryCode }) => {
   const [dailyData, setDailyData] = useState([])
 
@@ -80,7 +82,7 @@ const Chart = ({ countryCode }) => {
   ) : null
 
   return (
-    <Grid container justify="center">
+    <Grid container justify="center" className={styles.container}>
       <Grid item component={Card} xs={10}>
         <CardContent>
           <Typography variant="body2">

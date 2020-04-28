@@ -29,7 +29,7 @@ const Chart = ({ countryCode }) => {
    */
   const data = dailyData.reduce(
     ({ labels, confirmed, deaths }, d) => {
-      labels.push(countryCode === 'global' ? d.date : d.combinedKey)
+      labels.push(countryCode === 'global' ? d.date : d.label)
       confirmed.push(d.confirmed)
       deaths.push(d.deaths)
       return { labels, confirmed, deaths }

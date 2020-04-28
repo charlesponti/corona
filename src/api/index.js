@@ -65,30 +65,10 @@ export const fetchDailyData = async () => {
   }
 }
 
-const url = 'https://api.covid19api.com'
-
-export const fetchTotalCountryData = async ({ countrySlug }) => {
-  try {
-    /**
-      * @type {{ data: Array }}
-      */
-    const { data } = await axios.get(`${url}/country/${countrySlug}?from=2020-04-20T00:00:00Z&to=2020-04-21T00:00:00Z`)
-    return data.sort((a, b) => a - b).splice(0, 10).map(({ Province, Confirmed, Recovered, Deaths, Date: date }) => ({
-      confirmed: Confirmed,
-      deaths: Deaths,
-      recovered: Recovered,
-      date,
-      label: Province
-    }))
-  } catch (error) {
-    console.error(error)
-  }
-}
-
 /**
  *
  * @param {string} countryCode ISO3 code for country
- * @returns {Promise<{}>}
+ * @returns {Promise<{ confirmed: [], deaths: [], date: string, label: string }[]>}
  */
 export const fetchCountryConfirmedData = async (countryCode) => {
   try {
@@ -107,6 +87,26 @@ export const fetchCountryConfirmedData = async (countryCode) => {
         date: lastUpdate,
         label: combinedKey
       }))
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+const url = 'https://api.covid19api.com'
+
+export const fetchTotalCountryData = async ({ countrySlug }) => {
+  try {
+    /**
+      * @type {{ data: Array }}
+      */
+    const { data } = await axios.get(`${url}/country/${countrySlug}?from=2020-04-20T00:00:00Z&to=2020-04-21T00:00:00Z`)
+    return data.sort((a, b) => a - b).splice(0, 10).map(({ Province, Confirmed, Recovered, Deaths, Date: date }) => ({
+      confirmed: Confirmed,
+      deaths: Deaths,
+      recovered: Recovered,
+      date,
+      label: Province
+    }))
   } catch (error) {
     console.error(error)
   }

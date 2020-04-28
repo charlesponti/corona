@@ -25,14 +25,13 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <Typography variant="h1" xs={5} gutterBottom className={styles.siteTitle}>
-          <img src={img} className={styles.covidImg}/>
+          <img src={img} alt="COVID-19 Tracker" className={styles.covidImg}/>
         </Typography>
         <CountryPicker onChange={this.onCountryChange.bind(this)} />
         <Cards countryCode={countryCode} />
         <Chart countryCode={countryCode} />
         <Typography className={styles.footer}>
-          Made with ❤️
-           by <Link rel="noopener noreferrer" target="_blank" href="https://ponti.io" onClick={() => console.log('clicked website')}>
+          Made by <Link rel="noopener noreferrer" target="_blank" href="https://ponti.io" onClick={() => console.log('clicked website')}>
              @thecharlesponti</Link>
         </Typography>
       </div>

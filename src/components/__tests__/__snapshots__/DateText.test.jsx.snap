@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Emoji 1`] = `
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+  >
+    Tue Apr 28 2020
+  </p>
+</div>
+`;

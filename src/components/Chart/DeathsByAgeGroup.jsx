@@ -16,7 +16,7 @@ export default function DeathsByAgeGroup () {
   return (
     <Grid container justify="center" className={cx(styles.container)}>
       <Grid item component={Card} xs={10}>
-        <CardHeader title="Deaths by Age Group"/>
+        <CardHeader title="COVID-19 vs Total Deaths"/>
         <CardContent>
           <Typography variant="body2">
             <Bar
@@ -27,6 +27,13 @@ export default function DeathsByAgeGroup () {
                     data: deaths.map(d => parseInt(d['COVID-19 Deaths'].replace(',', ''))),
                     label: 'COVID-19 Deaths',
                     borderColor: 'rgba(0, 0, 255, 0.5)',
+                    fill: true
+                  },
+                  {
+                    data: deaths.map(d => parseInt(d['Total Deaths'].replace(',', ''))),
+                    label: 'Total Deaths',
+                    borderColor: 'rgba(255, 0, 0, 0.5)',
+                    backgroundColor: 'rgba(255, 0, 0, 0.5)',
                     fill: true
                   }
                 ]

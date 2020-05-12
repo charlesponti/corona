@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
+import CardHeader from '@material-ui/core/CardHeader'
+
 import Typography from '@material-ui/core/Typography'
 import { fetchDailyData, fetchCountryConfirmedData } from '../../api'
 
@@ -84,6 +86,7 @@ const Chart = ({ countryCode }) => {
   return (
     <Grid container justify="center" className={styles.container}>
       <Grid item component={Card} xs={10}>
+        <CardHeader title={countryCode === 'global' ? 'Cases & Deaths Over Time' : 'Cases & Deaths By Region'}/>
         <CardContent>
           <Typography variant="body2">
             {countryCode === 'global' ? lineChart : barChart}

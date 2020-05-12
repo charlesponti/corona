@@ -2,11 +2,11 @@ import React from 'react'
 import { Typography, Link } from '@material-ui/core'
 import { Cards, Chart, CountryPicker } from './components'
 import styles from './App.module.css'
-import img from './covid.png'
+import DeathsByAgeGroup from './components/Chart/DeathsByAgeGroup'
 
 class App extends React.Component {
   state = {
-    countryCode: 'global'
+    countryCode: 'USA'
   };
 
   async componentDidMount () {}
@@ -25,10 +25,11 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <Typography variant="h1" xs={5} className={styles.siteTitle}>
-          <img src={img} alt="COVID-19 Tracker" className={styles.covidImg}/>
+          COVID-19 Stats
         </Typography>
-        <CountryPicker onChange={this.onCountryChange.bind(this)} />
+        <CountryPicker onChange={this.onCountryChange.bind(this)} countryCode={countryCode} />
         <Cards countryCode={countryCode} />
+        {countryCode === 'USA' ? <DeathsByAgeGroup/> : null}
         <Chart countryCode={countryCode} />
         <Typography className={styles.footer}>
           Made by <Link rel="noopener noreferrer" target="_blank" href="https://ponti.io" onClick={() => console.log('clicked website')}>

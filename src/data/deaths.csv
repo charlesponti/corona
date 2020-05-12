@@ -1,0 +1,11 @@
+Data as of,Start week,End Week,State,Sex,Age group,COVID-19 Deaths,Total Deaths,Pneumonia Deaths,Pneumonia and COVID-19 Deaths,Influenza Deaths,"Pneumonia, Influenza, or COVID-19 Deaths",Footnote
+05/06/2020,02/01/2020,05/02/2020,United States,All Sexes,Under 1 year,4,"3,951",36,1,11,50,
+05/06/2020,02/01/2020,05/02/2020,United States,All Sexes,1-4 years,2,780,33,2,33,66,
+05/06/2020,02/01/2020,05/02/2020,United States,All Sexes,5-14 years,4,"1,146",38,0,41,83,
+05/06/2020,02/01/2020,05/02/2020,United States,All Sexes,15-24 years,48,"6,843",143,18,41,211,
+05/06/2020,02/01/2020,05/02/2020,United States,All Sexes,35-44 years,796,"21,021","1,109",307,210,"1,784",
+05/06/2020,02/01/2020,05/02/2020,United States,All Sexes,45-54 years,"2,262","40,725","2,951",943,522,"4,699",
+05/06/2020,02/01/2020,05/02/2020,United States,All Sexes,55-64 years,"5,422","97,716","8,521","2,390","1,108","12,464",
+05/06/2020,02/01/2020,05/02/2020,United States,All Sexes,65-74 years,"9,359","151,727","14,646","4,164","1,305","20,935",
+05/06/2020,02/01/2020,05/02/2020,United States,All Sexes,75-84 years,"12,026","190,511","19,415","5,461","1,328","27,141",
+05/06/2020,02/01/2020,05/02/2020,United States,All Sexes,85 years and over,"13,776","242,588","22,863","6,033","1,239","31,709",

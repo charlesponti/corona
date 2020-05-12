@@ -26,7 +26,8 @@ export default function DeathsByAgeGroup () {
                   {
                     data: deaths.map(d => parseInt(d['COVID-19 Deaths'].replace(',', ''))),
                     label: 'COVID-19 Deaths',
-                    borderColor: 'rgba(0, 0, 255, 0.5)',
+                    borderColor: 'rgba(0, 255, 0, 0.5)',
+                    backgroundColor: 'rgba(0, 255, 0, 0.5)',
                     fill: true
                   },
                   {

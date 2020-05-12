@@ -69,7 +69,8 @@ const Chart = ({ countryCode }) => {
           {
             data: data.confirmed,
             label: 'Confirmed Cases',
-            borderColor: 'rgba(0, 0, 255, 0.5)',
+            borderColor: 'rgba(0, 255, 0, 0.5)',
+            backgroundColor: 'rgba(0, 255, 0, 0.5)',
             fill: true
           },
           {
@@ -86,7 +87,7 @@ const Chart = ({ countryCode }) => {
   return (
     <Grid container justify="center" className={styles.container}>
       <Grid item component={Card} xs={10}>
-        <CardHeader title={countryCode === 'global' ? 'Cases & Deaths Over Time' : 'Cases & Deaths By Region'}/>
+        <CardHeader title={countryCode === 'global' ? 'COVID-19 Cases & Deaths Over Time' : 'COVID-19 Cases & Deaths By Region'}/>
         <CardContent>
           <Typography variant="body2">
             {countryCode === 'global' ? lineChart : barChart}

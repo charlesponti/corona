@@ -24,8 +24,8 @@ class App extends React.Component {
 
     return (
       <div className={styles.container}>
-        <Typography variant="h1" xs={5} className={styles.siteTitle}>
-          COVID-19 Stats
+        <Typography variant="h3" xs={5} className={styles.siteTitle}>
+          COVID-19
         </Typography>
         <CountryPicker onChange={this.onCountryChange.bind(this)} countryCode={countryCode} />
         <Cards countryCode={countryCode} />

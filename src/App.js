@@ -3,13 +3,12 @@ import { Typography, Link } from '@material-ui/core'
 import { Cards, Chart, CountryPicker } from './components'
 import styles from './App.module.css'
 import DeathsByAgeGroup from './components/Chart/DeathsByAgeGroup'
+import covidLogo from './covid.png'
 
 class App extends React.Component {
   state = {
     countryCode: 'USA'
   };
-
-  async componentDidMount () {}
 
   /**
    *
@@ -24,8 +23,8 @@ class App extends React.Component {
 
     return (
       <div className={styles.container}>
-        <Typography variant="h1" xs={5} className={styles.siteTitle}>
-          COVID-19 Stats
+        <Typography variant="h3" xs={5} className={styles.siteTitle}>
+          <img src={covidLogo} alt="COVID 19" className={styles.logo} />
         </Typography>
         <CountryPicker onChange={this.onCountryChange.bind(this)} countryCode={countryCode} />
         <Cards countryCode={countryCode} />

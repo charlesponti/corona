@@ -8,20 +8,16 @@ import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
 
 import Title from '../Title'
 import CountUpTo from '../CountUpTo'
-import Rate from '../Rate'
-import DateText from '../DateText'
 
 import styles from './Cards.module.css'
 
-export default function Deaths ({ deaths, confirmed, lastUpdate }) {
+export default function Deaths ({ deaths, confirmed }) {
   return (
     <Card className={cx(styles.card, styles.deaths)}>
       <CardContent>
         <FontAwesomeIcon icon={faSkullCrossbones} size="4x" style={{ marginBottom: '1rem' }}/>
         <Title title="Deaths" />
         <CountUpTo value={deaths} />
-        <Rate typeOfRate="Death" percentFor={deaths} percentOf={confirmed} />
-        <DateText date={lastUpdate} />
       </CardContent>
     </Card>
   )

@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Typography from '@material-ui/core/Typography'
 
 const DateText = ({ date }) => (
-  <Typography color="textSecondary">{new Date(date).toDateString()}</Typography>
+  <span>{new Date(date).toDateString().toLowerCase()}</span>
 )
 
 DateText.propTypes = {

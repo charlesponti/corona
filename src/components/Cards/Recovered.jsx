@@ -8,20 +8,16 @@ import { faVirusSlash } from '@fortawesome/free-solid-svg-icons'
 
 import Title from '../Title'
 import CountUpTo from '../CountUpTo'
-import Rate from '../Rate'
-import DateText from '../DateText'
 
 import styles from './Cards.module.css'
 
-export default function Recovered ({ recovered, confirmed, lastUpdate }) {
+export default function Recovered ({ recovered, confirmed }) {
   return (
     <Card className={cx(styles.card, styles.deaths)}>
       <CardContent>
         <FontAwesomeIcon icon={faVirusSlash} size="4x" style={{ marginBottom: '1rem' }}/>
         <Title title="Recovered"></Title>
         <CountUpTo value={recovered} />
-        <Rate typeOfRate="Recovery" percentFor={recovered} percentOf={confirmed} />
-        <DateText date={lastUpdate} />
       </CardContent>
     </Card>
   )

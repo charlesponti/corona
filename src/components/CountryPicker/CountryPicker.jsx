@@ -17,16 +17,18 @@ const CountryPicker = ({ onChange, countryCode }) => {
 
   return (
     <Grid container justify="center" className={cx(styles.container)}>
-      <Grid item xs={10} md={3} component={FormControl}>
-        <InputLabel>Country</InputLabel>
-        <NativeSelect onChange={(event) => onChange(event.target.value)} value={countryCode}>
-          <option value="global">All</option>
-          {countryData.map((country) => (
-            <option key={country.name} value={country.iso3}>
-              {country.name}
-            </option>
-          ))}
-        </NativeSelect>
+      <Grid item xs={12}>
+        <FormControl className={styles.formControl}>
+          <InputLabel className={styles.label}>Country</InputLabel>
+          <NativeSelect onChange={(event) => onChange(event.target.value)} value={countryCode} className={styles.select}>
+            <option value="global">All</option>
+            {countryData.map((country) => (
+              <option key={country.name} value={country.iso3}>
+                {country.name}
+              </option>
+            ))}
+          </NativeSelect>
+        </FormControl>
       </Grid>
     </Grid>
   )

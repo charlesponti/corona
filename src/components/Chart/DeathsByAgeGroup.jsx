@@ -1,46 +1,42 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CardHeader from '@material-ui/core/CardHeader'
 import Card from '@material-ui/core/Card'
-import Typography from '@material-ui/core/Typography'
 import CardContent from '@material-ui/core/CardContent'
 import Grid from '@material-ui/core/Grid'
 
-import cx from 'classnames'
 import styles from './DeathsByAgeGroup.module.css'
 
-import deaths from '../../data/deaths.json'
-import { Bar } from 'react-chartjs-2'
+import deathsByAgeGroup from '../../data/deaths.json'
+import { CardHeader } from '@material-ui/core'
+
+function toNumber(string) {
+  return Number(string.replace(/,/ig, ''))
+}
+
+function getPercentageOfDeaths(row) {
+  return (toNumber(row["All Deaths involving COVID-19"]) / toNumber(row["Deaths from All Causes"]) * 100).toFixed(2)
+}
 
 export default function DeathsByAgeGroup () {
   return (
-    <Grid container justify="center" className={cx(styles.container)}>
-      <Grid item component={Card} xs={10}>
-        <CardHeader title="COVID-19 vs Total Deaths"/>
+    <Grid container className={styles.container}>
+      <Grid item component={Card} xs={12}>
         <CardContent>
-          <Typography variant="body2">
-            <Bar
-              data={{
-                labels: deaths.map(d => d['Age group']),
-                datasets: [
-                  {
-                    data: deaths.map(d => parseInt(d['COVID-19 Deaths'].replace(',', ''))),
-                    label: 'COVID-19 Deaths',
-                    borderColor: 'rgba(0, 255, 0, 0.5)',
-                    backgroundColor: 'rgba(0, 255, 0, 0.5)',
-                    fill: true
-                  },
-                  {
-                    data: deaths.map(d => parseInt(d['Total Deaths'].replace(',', ''))),
-                    label: 'Total Deaths',
-                    borderColor: 'rgba(255, 0, 0, 0.5)',
-                    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-                    fill: true
-                  }
-                ]
-              }}
-            />
-          </Typography>
+          <CardHeader title="% of All Deaths"/>
+          <Grid container>
+            {deathsByAgeGroup.map((row) => {
+              const ageGroup = row["Age group"].toLowerCase()
+              return (
+                <Grid container justify="center" key={row["Age group"]}>
+                  <Grid item xs={6} sm={3}>
+                    {ageGroup}
+                  </Grid>
+                  <Grid item xs={6} sm={3}>
+                    {getPercentageOfDeaths(row)}%
+                  </Grid>
+                </Grid>
+            )})}
+          </Grid>
         </CardContent>
       </Grid>
     </Grid>

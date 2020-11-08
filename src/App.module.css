@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(250, 250, 250);
+    background-color: #131313;
     margin-top: 20px;
 }
 
@@ -22,6 +22,7 @@ body {
 
 .footer {
     margin-bottom: 2rem !important;
+    color: white
 }
 
 @media (max-width: 700px) {

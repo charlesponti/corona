@@ -1,4 +1,18 @@
 .container {
   margin: 3rem 0 1rem;
   max-width: 600px;
+  text-align: center;
+}
+
+.formControl {
+  min-width: 400px !important;
+}
+
+.label,
+.select {
+  color: green !important;
+}
+
+.select:before {
+  border-bottom: 1px solid green !important;
 }

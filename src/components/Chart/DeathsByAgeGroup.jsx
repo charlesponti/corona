@@ -4,7 +4,6 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Grid from '@material-ui/core/Grid'
 
-import cx from 'classnames'
 import styles from './DeathsByAgeGroup.module.css'
 
 import deathsByAgeGroup from '../../data/deaths.json'
@@ -20,15 +19,15 @@ function getPercentageOfDeaths(row) {
 
 export default function DeathsByAgeGroup () {
   return (
-    <Grid container justify="center" className={cx(styles.container)}>
-      <Grid item component={Card} xs={12} sm={10}>
+    <Grid container className={styles.container}>
+      <Grid item component={Card} xs={12}>
         <CardContent>
-          <CardHeader title="Deaths by Covid"/>
+          <CardHeader title="% of All Deaths"/>
           <Grid container>
             {deathsByAgeGroup.map((row) => {
               const ageGroup = row["Age group"].toLowerCase()
               return (
-                <Grid container xs={12} justify="center" key={row["Age group"]}>
+                <Grid container justify="center" key={row["Age group"]}>
                   <Grid item xs={6} sm={3}>
                     {ageGroup}
                   </Grid>

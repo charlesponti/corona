@@ -1,3 +1,4 @@
+
 .container {
   margin: 3rem 0 1rem;
   max-width: 600px;
@@ -10,9 +11,13 @@
 
 .label,
 .select {
-  color: green !important;
+  color: #2ec72e !important;
 }
 
 .select:before {
-  border-bottom: 1px solid green !important;
+  border-bottom: 1px solid #2ec72e !important;
+}
+
+.select > svg {
+  color: #2ec72e !important;
 }

@@ -7,7 +7,7 @@ module.exports = {
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "standard"
+    "prettier"
   ],
   globals: {
     Atomics: 'readonly',
@@ -22,7 +22,8 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react'
+    'react',
+    'prettier'
   ],
   rules: {
   }

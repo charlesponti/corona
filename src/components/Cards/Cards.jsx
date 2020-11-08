@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { Grid, makeStyles } from '@material-ui/core'
+import { Card, Grid, makeStyles } from '@material-ui/core'
 import cx from 'classnames'
 import styles from './Cards.module.css'
 
@@ -39,16 +39,29 @@ export default function Cards ({ countryCode }) {
     fetchApi()
   }, [countryCode])
 
-  return data.confirmed ? (
-    <Grid container justify="center" className={cx(styles.container)}>
-      <Grid item xs={12} className={classes.lastUpdated}>
-        last updated: {<DateText date={data.lastUpdate} />}
-      </Grid>
-      <Grid item xs={12} md={3} component={ConfirmedCases} {...data} />
-      <Grid item xs={12} md={3} component={Recovered} {...data} />
-      <Grid item xs={12} md={3} component={Deaths} {...data} />
-    </Grid>
-  ) : null
+  return (
+    data.confirmed ? (
+      <Card>
+        <Grid container justify="center" className={cx(styles.container)}>
+          <Grid item xs={12} className={classes.lastUpdated}>
+            last updated: {<DateText date={data.lastUpdate} />}
+          </Grid>
+          <Grid container spacing={1} justify="center">
+            <Grid item xs={12} sm={3}>
+              <ConfirmedCases confirmed={data.confirmed} />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <Recovered recovered={data.recovered} />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <Deaths deaths={data.deaths}/>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Card>
+      
+    ) : null
+  )
 }
 
 Cards.propTypes = {

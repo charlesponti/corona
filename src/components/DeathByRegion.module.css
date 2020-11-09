@@ -1,0 +1,35 @@
+.row {
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid orchid;
+}
+
+.label {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.row .stat:nth-child(2) {
+    color: blue;
+}
+
+.row .stat:nth-child(3) {
+    color: red;
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        margin-bottom: 1rem;
+        border: 0;
+    }
+
+    .label {
+        border-bottom: 1px solid orchid;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .stat {
+        padding-top: 0.5rem;
+    }
+}

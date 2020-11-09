@@ -10,7 +10,7 @@ export default function ConfirmedCases ({ confirmed }) {
   return (
     <>
       <FontAwesomeIcon icon={faVirus} size="4x" style={{ marginBottom: '1rem', color: "purple" }}/>
-      <Title title="Confirmed Cases" />
+      <Title title="Confirmed" />
       <CountUpTo value={confirmed} />
     </>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography, Link } from '@material-ui/core'
 import { Cards, Chart, CountryPicker } from './components'
 import styles from './App.module.css'
-import DeathsByAgeGroup from './components/Chart/DeathsByAgeGroup'
+import  { DeathsByAgeGroup } from './components/DeathsByAgeGroup'
 import covidLogo from './covid.png'
 
 class App extends React.Component {
@@ -31,8 +31,10 @@ class App extends React.Component {
         {countryCode === 'USA' ? <DeathsByAgeGroup/> : null}
         <Chart countryCode={countryCode} />
         <Typography className={styles.footer}>
-          Made by <Link rel="noopener noreferrer" target="_blank" href="https://ponti.io" onClick={() => console.log('clicked website')}>
-             @thecharlesponti</Link>
+          Made by 
+          <Link rel="noopener noreferrer" target="_blank" href="https://ponti.io">
+            @thecharlesponti
+          </Link>
         </Typography>
       </div>
     )

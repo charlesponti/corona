@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { Line, Bar } from 'react-chartjs-2'
+import { Line } from 'react-chartjs-2'
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
-import CardHeader from '@material-ui/core/CardHeader'
 
-import Typography from '@material-ui/core/Typography'
 import { fetchDailyData, fetchCountryConfirmedData } from '../../api'
 
 import styles from './Chart.module.css'
+import DeathByRegion from '../DeathByRegion'
 
 const Chart = ({ countryCode }) => {
   const [dailyData, setDailyData] = useState([])
@@ -61,37 +60,14 @@ const Chart = ({ countryCode }) => {
     />
   ) : null
 
-  const barChart = dailyData.length ? (
-    <Bar
-      data={{
-        labels: data.labels,
-        datasets: [
-          {
-            data: data.confirmed,
-            label: 'Confirmed Cases',
-            borderColor: 'rgba(0, 255, 0, 0.5)',
-            backgroundColor: 'rgba(0, 255, 0, 0.5)',
-            fill: true
-          },
-          {
-            data: data.deaths,
-            label: 'Deaths',
-            borderColor: 'rgba(255, 0, 0, 0.5)',
-            backgroundColor: 'rgba(255, 0, 0, 0.5)'
-          }
-        ]
-      }}
-    />
-  ) : null
-
   return (
     <Grid container justify="center" className={styles.container}>
-      <Grid item component={Card} xs={10}>
-        <CardHeader title={countryCode === 'global' ? 'COVID-19 Cases & Deaths Over Time' : 'COVID-19 Cases & Deaths By Region'}/>
+      <Grid item component={Card} xs={11}>
+        <h2 style={{ paddingLeft: '16px' }}>
+          {countryCode === 'global' ? 'Cases & Deaths Over Time' : 'Cases & Deaths By Region'}
+        </h2>
         <CardContent>
-          <Typography variant="body2">
-            {countryCode === 'global' ? lineChart : barChart}
-          </Typography>
+          {countryCode === 'global' ? lineChart : <DeathByRegion data={dailyData} countryCode={countryCode} />}
         </CardContent>
       </Grid>
     </Grid>

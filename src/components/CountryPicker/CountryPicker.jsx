@@ -17,7 +17,7 @@ const CountryPicker = ({ onChange, countryCode }) => {
 
   return (
     <Grid container justify="center" className={cx(styles.container)}>
-      <Grid item xs={12}>
+      <Grid item xs={10}>
         <FormControl className={styles.formControl}>
           <InputLabel className={styles.label}>Country</InputLabel>
           <NativeSelect onChange={(event) => onChange(event.target.value)} value={countryCode} className={styles.select}>

@@ -12,7 +12,8 @@ import DateText from '../DateText'
 
 const useStyles = makeStyles({
   lastUpdated: {
-    margin: '1rem 0 2rem'
+    margin: '1rem 0 2rem',
+    textAligh: 'center'
   }
 })
 
@@ -41,25 +42,28 @@ export default function Cards ({ countryCode }) {
 
   return (
     data.confirmed ? (
-      <Card>
-        <Grid container justify="center" className={cx(styles.container)}>
-          <Grid item xs={12} className={classes.lastUpdated}>
-            last updated: {<DateText date={data.lastUpdate} />}
-          </Grid>
-          <Grid container spacing={1} justify="center">
-            <Grid item xs={12} sm={3}>
-              <ConfirmedCases confirmed={data.confirmed} />
+      <Grid container justify="center" className={cx(styles.container)}>
+        <Grid item xs={11}>
+          <Card>
+            <Grid container>
+              <Grid item xs={12} className={classes.lastUpdated}>
+                last updated: {<DateText date={data.lastUpdate} />}
+              </Grid>
+              <Grid container justify="center">
+                <Grid item xs={12} sm={3}>
+                  <ConfirmedCases confirmed={data.confirmed} />
+                </Grid>
+                <Grid item xs={12} sm={3}>
+                  <Recovered recovered={data.recovered} />
+                </Grid>
+                <Grid item xs={12} sm={3}>
+                  <Deaths deaths={data.deaths}/>
+                </Grid>
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={3}>
-              <Recovered recovered={data.recovered} />
-            </Grid>
-            <Grid item xs={12} sm={3}>
-              <Deaths deaths={data.deaths}/>
-            </Grid>
-          </Grid>
+          </Card>
         </Grid>
-      </Card>
-      
+      </Grid>      
     ) : null
   )
 }

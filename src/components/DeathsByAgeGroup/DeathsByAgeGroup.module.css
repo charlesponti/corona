@@ -3,6 +3,10 @@
   max-width: 700px;
 }
 
-.data {
-  /* padding-left: 16px; */
+.ageGroup {
+  margin-bottom: 0.25rem;
+}
+
+.deaths {
+  color: #ff5a5a;
 }

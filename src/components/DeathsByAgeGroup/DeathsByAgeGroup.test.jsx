@@ -1,11 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import DeathsByAgeGroup from '../Chart/DeathsByAgeGroup'
+import DeathsByAgeGroup from './DeathsByAgeGroup'
 
-test('should render ConfirmedCases', async (done) => {
+test('should render DeathsByAgeGroup', () => {
   const { container } = render(
     <DeathsByAgeGroup />
   )
   expect(container).toMatchSnapshot()
-  done()
 })

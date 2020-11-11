@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render DeathsByAgeGroup 1`] = `
+<div>
+  <div
+    class="MuiGrid-root container MuiGrid-container MuiGrid-justify-xs-center"
+  >
+    <div
+      class="MuiPaper-root MuiCard-root MuiGrid-root card MuiGrid-item MuiGrid-grid-xs-11 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <h2
+        style="padding-left: 16px;"
+      >
+        Deaths by Age Group
+      </h2>
+      <div
+        class="MuiCardContent-root"
+      >
+        <div
+          class="data"
+        >
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              all ages
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              217,348
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              under 1 
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              25
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              1–4 
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              15
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              5–14 
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              39
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              15–24 
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              400
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              25–34 
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              1,677
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              35–44 
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              4,333
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              45–54 
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              11,476
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              55–64 
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              27,569
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              65–74 
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              46,988
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              75–84 
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              57,866
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root ageGroup MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-7"
+            >
+              85  and over
+            </div>
+            <div
+              class="MuiGrid-root deaths MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-3"
+            >
+              66,960
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -2,10 +2,8 @@
 
 exports[`should render Emoji 1`] = `
 <div>
-  <p
-    class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
-  >
-    Tue Apr 28 2020
-  </p>
+  <span>
+    tue apr 28 2020
+  </span>
 </div>
 `;

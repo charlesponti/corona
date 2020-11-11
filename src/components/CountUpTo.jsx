@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography'
 
 const CountUpTo = ({ value }) => (
   <Typography variant="h5" gutterBottom>
-    <CountUp start={0} end={value} duration={process.env.NODE_ENV === 'test' ? 0 : 1.5} separator="," />
+    <CountUp start={0} end={value} duration={1.5} separator="," />
   </Typography>
 )
 

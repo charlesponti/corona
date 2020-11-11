@@ -52,9 +52,9 @@ export const getCountries = async () => {
   }
 }
 
-export const fetchDailyData = async () => {
+export const fetchDailyData = async (countryCode) => {
   try {
-    const { data } = await axios.get(`${baseUrl}/daily`)
+    const { data } = await axios.get(`${baseUrl}/daily${countryCode !== 'global' ? `?country=${countryCode}` : ''}`)
     return data.map(({ confirmed, reportDate, deaths }) => ({
       date: reportDate,
       confirmed: confirmed.total,
@@ -68,24 +68,26 @@ export const fetchDailyData = async () => {
 /**
  *
  * @param {string} countryCode ISO3 code for country
+ * @param {'confirmed'|'deaths'} by - Key to sort on (confirmed or deaths)
  * @returns {Promise<{ confirmed: [], deaths: [], date: string, label: string }[]>}
  */
-export const fetchCountryConfirmedData = async (countryCode) => {
+export const fetchCountryRegionalData = async (countryCode, by = 'confirmed') => {
   try {
     /**
      * @type {{ data: Array }}
      */
     const { data } = await axios.get(
-      `${baseUrl}/countries/${countryCode}/confirmed`
+      `${baseUrl}/countries/${countryCode}/${by}`
     )
 
     return data
       .splice(0, 10)
-      .map(({ confirmed, deaths, lastUpdate, combinedKey }) => ({
+      .map(({ uid, confirmed, deaths, admin2: county, provinceState: state }) => ({
         confirmed,
         deaths,
-        date: lastUpdate,
-        label: combinedKey
+        county,
+        state,
+        uid
       }))
   } catch (error) {
     console.error(error)

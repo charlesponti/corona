@@ -9,6 +9,7 @@ import ConfirmedCases from './ConfirmedCases'
 import Deaths from './Deaths'
 import Recovered from './Recovered'
 import DateText from '../DateText'
+import theme from '../../theme.module.css'
 
 const useStyles = makeStyles({
   lastUpdated: {
@@ -44,19 +45,19 @@ export default function Cards ({ countryCode }) {
     data.confirmed ? (
       <Grid container justify="center" className={cx(styles.container)}>
         <Grid item xs={11}>
-          <Card>
+          <Card className={theme.card}>
             <Grid container>
               <Grid item xs={12} className={classes.lastUpdated}>
                 last updated: {<DateText date={data.lastUpdate} />}
               </Grid>
               <Grid container justify="center">
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={3} className={styles.stat}>
                   <ConfirmedCases confirmed={data.confirmed} />
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={3} className={styles.stat}>
                   <Recovered recovered={data.recovered} />
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={3} className={styles.stat}>
                   <Deaths deaths={data.deaths}/>
                 </Grid>
               </Grid>

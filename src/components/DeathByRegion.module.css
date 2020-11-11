@@ -1,7 +1,11 @@
+.container {
+    max-width: 700px;
+}
+
 .row {
     margin: 1rem 0;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid orchid;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #484848;
 }
 
 .label {
@@ -10,11 +14,11 @@
 }
 
 .row .stat:nth-child(2) {
-    color: blue;
+    color: #7e7eef;
 }
 
 .row .stat:nth-child(3) {
-    color: red;
+    color: #ff5a5a;
 }
 
 @media screen and (max-width: 600px) {
@@ -31,5 +35,9 @@
 
     .stat {
         padding-top: 0.5rem;
+    }
+
+    .container {
+        margin-top: 1rem;
     }
 }

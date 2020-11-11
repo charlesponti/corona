@@ -1,4 +1,6 @@
 .card {
     background-color: #232323 !important;
     color: white !important;
+    margin: 1rem auto !important;
+    max-width: 600px !important;
 }

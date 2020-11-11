@@ -46,7 +46,7 @@ export default function Cards ({ countryCode }) {
       <Grid container justify="center" className={cx(styles.container)}>
         <Grid item xs={11}>
           <Card className={theme.card}>
-            <Grid container>
+            <Grid container justify="center">
               <Grid item xs={12} className={classes.lastUpdated}>
                 last updated: {<DateText date={data.lastUpdate} />}
               </Grid>

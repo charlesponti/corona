@@ -1,5 +1,11 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   margin: 0;
+  background-color: #131313;
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -8,4 +14,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
 }

@@ -1,17 +1,13 @@
-body {
-    background-color: #131313;
-    margin-top: 20px;
-}
-
-.logo {
-    width: 125px
-}
-
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-top: 2rem;
+}
+
+.logo {
+    width: 125px
 }
 
 .siteTitle {

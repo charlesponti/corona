@@ -9,7 +9,7 @@ import CountUpTo from '../CountUpTo'
 export default function ConfirmedCases ({ confirmed }) {
   return (
     <>
-      <FontAwesomeIcon icon={faVirus} size="4x" style={{ marginBottom: '1rem', color: "purple" }}/>
+      <FontAwesomeIcon icon={faVirus} size="4x" style={{ color: "purple" }}/>
       <Title title="Confirmed" />
       <CountUpTo value={confirmed} />
     </>

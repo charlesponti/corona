@@ -82,11 +82,12 @@ export const fetchCountryRegionalData = async (countryCode, by = 'confirmed') =>
 
     return data
       .splice(0, 10)
-      .map(({ confirmed, deaths, admin2: county, provinceState: state }) => ({
+      .map(({ uid, confirmed, deaths, admin2: county, provinceState: state }) => ({
         confirmed,
         deaths,
         county,
-        state
+        state,
+        uid
       }))
   } catch (error) {
     console.error(error)

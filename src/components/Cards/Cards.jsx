@@ -51,13 +51,13 @@ export default function Cards ({ countryCode }) {
                 last updated: {<DateText date={data.lastUpdate} />}
               </Grid>
               <Grid container justify="center">
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={3} className={styles.stat}>
                   <ConfirmedCases confirmed={data.confirmed} />
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={3} className={styles.stat}>
                   <Recovered recovered={data.recovered} />
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={3} className={styles.stat}>
                   <Deaths deaths={data.deaths}/>
                 </Grid>
               </Grid>

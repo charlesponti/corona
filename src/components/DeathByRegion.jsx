@@ -23,7 +23,7 @@ function DeathByRegion({ countryCode }) {
         fetchApi()
     }, [countryCode])
 
-    return (
+    return dataByRegion.length > 1 ? (
         <Grid container justify="center" className={styles.container}>
             <Grid item component={Card} xs={11} className={theme.card}>
                 <h2 style={{ paddingLeft: '16px', marginBottom: 0 }}>
@@ -31,7 +31,7 @@ function DeathByRegion({ countryCode }) {
                 </h2>
                 <CardContent>
                     {dataByRegion.map(row => (
-                        <Grid container justify="center" alignItems="center" key={row.county} className={styles.row}>
+                        <Grid container justify="center" alignItems="center" key={row.uid} className={styles.row}>
                             <Grid item xs={12} sm={7} className={styles.label}>
                                 {row.county} <span style={{ fontSize: '12px' }}><i>{row.state}</i></span>
                             </Grid>
@@ -46,7 +46,7 @@ function DeathByRegion({ countryCode }) {
                 </CardContent>
             </Grid>
         </Grid>
-    )
+    ) : null
 }
 
 DeathByRegion.propTypes = {

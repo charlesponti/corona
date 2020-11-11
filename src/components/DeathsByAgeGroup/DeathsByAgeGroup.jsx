@@ -21,7 +21,7 @@ export default function DeathsByAgeGroup () {
               const ageGroup = row["Age group"].toLowerCase()
               return (
                 <Grid container key={row["Age group"]} className={styles.ageGroup}>
-                  <Grid item xs={10} sm={7}>
+                  <Grid item xs={5} sm={5}>
                     {ageGroup.replace('years', '').replace('year', '')}
                   </Grid>
                   <Grid item xs={2} sm={3} className={styles.deaths}>

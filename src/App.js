@@ -2,9 +2,7 @@ import React from 'react'
 import { Typography, Link } from '@material-ui/core'
 import { TopStats } from './components/Cards'
 import { CountryPicker } from './components/CountryPicker'
-// import { DeathsOverTime } from './components/DeathsOverTime'
 import DeathByRegion from './components/DeathByRegion'
-import  { DeathsByAgeGroup } from './components/DeathsByAgeGroup'
 
 import styles from './App.module.css'
 import covidLogo from './covid.png'
@@ -33,7 +31,7 @@ class App extends React.Component {
         </Typography>
         <CountryPicker onChange={this.onCountryChange.bind(this)} countryCode={countryCode} />
         <TopStats countryCode={countryCode} />
-        {countryCode === 'USA' ? <DeathsByAgeGroup/> : null}
+        {/* {countryCode === 'USA' ? <DeathsByAgeGroup/> : null} */}
         {/* <DeathsOverTime countryCode={countryCode} /> */}
         {countryCode !== 'global' ? <DeathByRegion countryCode={countryCode} /> : null}
         <Typography className={styles.footer}>

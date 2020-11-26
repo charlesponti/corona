@@ -7,6 +7,8 @@ import styles from './DeathByRegion.module.css'
 import theme from '../theme.module.css'
 
 import { fetchCountryRegionalData } from '../api'
+import { faSkullCrossbones, faVirus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
  * 
@@ -32,14 +34,14 @@ function DeathByRegion({ countryCode }) {
                 <CardContent>
                     {dataByRegion.map(row => (
                         <Grid container justify="center" alignItems="center" key={row.uid} className={styles.row}>
-                            <Grid item xs={12} sm={7} className={styles.label}>
+                            <Grid item xs={12} sm={6} className={styles.label}>
                                 {row.county} <span style={{ fontSize: '12px' }}><i>{row.state}</i></span>
                             </Grid>
                             <Grid item xs={12} sm={3} className={styles.stat}>
-                                {row.confirmed} confirmed
+                                <FontAwesomeIcon icon={faVirus} size="1x" style={{ marginRight: '0.5rem' }}/> {row.confirmed} 
                             </Grid>
-                            <Grid item xs={12} sm={2} className={styles.stat}>
-                                {row.deaths} deaths
+                            <Grid item xs={12} sm={3} className={styles.stat}>
+                                <FontAwesomeIcon icon={faSkullCrossbones} size="1x" style={{ marginRight: '0.5rem' }}/> {row.deaths}
                             </Grid>
                         </Grid>
                     ))}
